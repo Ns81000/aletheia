@@ -1,0 +1,48 @@
+{
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "nextjs",
+  "nodeVersion": "18.17.0",
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  },
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_API_URL",
+      "description": "API endpoint for the application",
+      "value": "",
+      "type": "secret"
+    }
+  ],
+  "regions": ["iad1"],
+  "functions": {
+    "api/**": {
+      "maxDuration": 60
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

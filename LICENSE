@@ -1,0 +1,99 @@
+MIT License
+
+Copyright (c) 2024-2026 Ns81000
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+2. ATTRIBUTION REQUIREMENT: Any derivative works, modifications, or substantial
+   portions of this Software must include:
+   - A clear reference to the original project: "Based on Aletheia by Ns81000"
+   - The original GitHub repository: https://github.com/Ns81000/aletheia
+   - A copy of this license file
+   - In user-facing applications, a visible acknowledgment in the footer or about section
+
+3. Modified versions must clearly state:
+   - What changes were made to the original code
+   - The date of modifications
+   - The names of contributors who made the changes
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ALETHEIA PROJECT INFORMATION
+============================
+
+Project Name: Aletheia - SSL/TLS Certificate Intelligence Platform
+Original Author: Ns81000
+Repository: https://github.com/Ns81000/aletheia
+Description: A sophisticated SSL/TLS certificate analysis platform providing 
+             deep insights into certificate security, transparency logs, and 
+             cryptographic configurations.
+
+---
+
+CONTRIBUTOR ACKNOWLEDGMENTS
+============================
+
+We recognize and appreciate all contributions to this project. Contributors
+are encouraged to add their names to a CONTRIBUTORS.md file in their pull requests.
+
+---
+
+THIRD-PARTY LICENSES
+====================
+
+This project uses the following open-source libraries:
+
+- Next.js (MIT License) - https://github.com/vercel/next.js
+- React (MIT License) - https://github.com/facebook/react
+- TypeScript (Apache 2.0 License) - https://github.com/microsoft/TypeScript
+- Tailwind CSS (MIT License) - https://github.com/tailwindlabs/tailwindcss
+- Lucide React (ISC License) - https://github.com/lucide-icons/lucide
+- jsPDF (MIT License) - https://github.com/parallax/jsPDF
+- date-fns (MIT License) - https://github.com/date-fns/date-fns
+- Zod (MIT License) - https://github.com/colinhacks/zod
+
+For complete license details of dependencies, see package.json and pnpm-lock.yaml
+
+---
+
+USAGE GUIDELINES
+================
+
+ALLOWED USES:
+✓ Commercial use of this software
+✓ Modification of the source code
+✓ Distribution of the software
+✓ Private use
+✓ Sublicensing under these same terms
+
+REQUIREMENTS:
+✓ Include a copy of this license and copyright notice
+✓ State significant changes made to the software
+✓ Include attribution to the original author (Ns81000) and project (Aletheia)
+✓ Document all modifications clearly
+
+RESTRICTIONS:
+✗ Cannot hold the original authors liable for damages
+✗ Cannot remove or alter license and copyright notices
+✗ Cannot claim original authorship of the entire work
+
+---
+
+For questions about licensing or attribution, please open an issue at:
+https://github.com/Ns81000/aletheia/issues

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Targeted theme transitions - only for elements that change with theme */
+body,
+[class*="bg-"],
+[class*="border-"],
+[class*="text-"],
+button,
+a,
+input,
+textarea {
+  transition: background-color 150ms ease-in-out,
+    border-color 150ms ease-in-out,
+    color 150ms ease-in-out;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
