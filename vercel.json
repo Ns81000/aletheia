@@ -7,14 +7,6 @@
     "enabled": true,
     "autoAlias": true
   },
-  "env": [
-    {
-      "key": "NEXT_PUBLIC_API_URL",
-      "description": "API endpoint for the application",
-      "value": "",
-      "type": "secret"
-    }
-  ],
   "regions": ["iad1"],
   "functions": {
     "api/**": {
