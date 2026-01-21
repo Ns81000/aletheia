@@ -91,11 +91,11 @@ Generate professional reports:
 <summary><b>Click to view platform features</b></summary>
 
 ### Dashboard & Search
-![Dashboard](./public/screenshots/dashboard.png)
+![Dashboard](./public/screenshots/analysis.png)
 *Elegant interface with powerful domain search capabilities*
 
 ### Deep Analysis
-![Analysis](./public/screenshots/analysis.png)
+![Analysis](./public/screenshots/dashboard.png)
 *Comprehensive certificate analysis with real-time data*
 
 ### Certificate Details
