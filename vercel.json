@@ -1,18 +1,4 @@
 {
-  "buildCommand": "pnpm build",
-  "devCommand": "pnpm dev",
-  "installCommand": "pnpm install --frozen-lockfile",
-  "framework": "nextjs",
-  "github": {
-    "enabled": true,
-    "autoAlias": true
-  },
-  "regions": ["iad1"],
-  "functions": {
-    "api/**": {
-      "maxDuration": 60
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
