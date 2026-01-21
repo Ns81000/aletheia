@@ -74,7 +74,7 @@ export async function checkCertificateDirect(
 
         const certificateData: CertificateData = {
           domain,
-          valid: cert.valid,
+          valid: (cert as any).valid !== undefined ? (cert as any).valid : true,
           issuer: {
             commonName: issuer.CN || '',
             organization: issuer.O || '',
@@ -93,8 +93,8 @@ export async function checkCertificateDirect(
           fingerprint: cert.fingerprint || '',
           fingerprintSha256: cert.fingerprint256 || '',
           publicKey,
-          signatureAlgorithm: cert.signatureAlgorithm || 'Unknown',
-          version: cert.version || 3,
+          signatureAlgorithm: (cert as any).signatureAlgorithm || 'Unknown',
+          version: (cert as any).version || 3,
           tlsVersion: protocol || 'Unknown',
           cipherSuite: cipher ? `${cipher.name} (${cipher.version})` : 'Unknown',
           certificateChain,
