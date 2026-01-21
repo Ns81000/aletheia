@@ -68,7 +68,7 @@ export async function checkCertificateDirect(
           publicKey,
           daysRemaining,
           isSelfSigned,
-          signatureAlgorithm: cert.signatureAlgorithm || 'Unknown',
+          signatureAlgorithm: (cert as any).signatureAlgorithm || 'Unknown',
           certificateChain,
         });
 
