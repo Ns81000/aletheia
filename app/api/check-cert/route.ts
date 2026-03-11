@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import * as tls from 'tls';
 import { CertificateData, ApiResponse } from '@/types/certificate';
 
+// Helper to safely coerce string | string[] to string
+function str(value: string | string[] | undefined): string {
+  if (Array.isArray(value)) return value[0] ?? '';
+  return value ?? '';
+}
+
 // Helper function to parse domain
 function parseDomain(input: string): string {
   let domain = input.replace(/^https?:\/\//, '');
@@ -113,17 +119,16 @@ export async function POST(request: NextRequest) {
             (validTo.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
           );
 
-          const isSelfSigned = cert.issuer?.CN === cert.subject?.CN;
-          const cn = Array.isArray(cert.subject?.CN) ? cert.subject.CN[0] : cert.subject?.CN;
-          const isWildcard = cn?.startsWith('*.');
+          const isSelfSigned = str(cert.issuer?.CN) === str(cert.subject?.CN);
+          const isWildcard = str(cert.subject?.CN).startsWith('*.');
 
           // Get certificate chain
           const chain: any[] = [];
           let currentCert = cert;
           while (currentCert.issuerCertificate && currentCert.issuerCertificate !== currentCert) {
             chain.push({
-              subject: currentCert.issuerCertificate.subject?.CN || 'Unknown',
-              issuer: currentCert.issuerCertificate.issuer?.CN || 'Unknown',
+              subject: str(currentCert.issuerCertificate.subject?.CN) || 'Unknown',
+              issuer: str(currentCert.issuerCertificate.issuer?.CN) || 'Unknown',
               validFrom: currentCert.issuerCertificate.valid_from,
               validTo: currentCert.issuerCertificate.valid_to,
             });
@@ -144,14 +149,14 @@ export async function POST(request: NextRequest) {
             domain,
             valid: daysRemaining > 0,
             issuer: {
-              commonName: cert.issuer?.CN || '',
-              organization: cert.issuer?.O || '',
-              country: cert.issuer?.C || '',
+              commonName: str(cert.issuer?.CN),
+              organization: str(cert.issuer?.O),
+              country: str(cert.issuer?.C),
             },
             subject: {
-              commonName: cert.subject?.CN || '',
-              organization: cert.subject?.O,
-              country: cert.subject?.C,
+              commonName: str(cert.subject?.CN),
+              organization: str(cert.subject?.O),
+              country: str(cert.subject?.C),
             },
             validFrom: validFrom.toISOString(),
             validTo: validTo.toISOString(),
