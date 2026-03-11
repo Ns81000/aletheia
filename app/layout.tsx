@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Aletheia - SSL/TLS Certificate Intelligence',
   description: 'Understand your website\'s security, beautifully.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   keywords: ['ssl', 'tls', 'certificate', 'security', 'https', 'encryption'],
   authors: [{ name: 'Aletheia' }],
   openGraph: {
