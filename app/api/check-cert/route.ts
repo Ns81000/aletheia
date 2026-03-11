@@ -114,7 +114,8 @@ export async function POST(request: NextRequest) {
           );
 
           const isSelfSigned = cert.issuer?.CN === cert.subject?.CN;
-          const isWildcard = cert.subject?.CN?.startsWith('*.');
+          const cn = Array.isArray(cert.subject?.CN) ? cert.subject.CN[0] : cert.subject?.CN;
+          const isWildcard = cn?.startsWith('*.');
 
           // Get certificate chain
           const chain: any[] = [];
